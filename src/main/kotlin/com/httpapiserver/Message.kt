@@ -1,9 +1,13 @@
 package com.httpapiserver
 
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 @Entity
 @Table(name = "messages")
-class Message(@Id var id: String, val text: String)
+class Message(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long?,
+
+    val text: String
+)

@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS messages (
-  id       VARCHAR(255)  PRIMARY KEY,
-  text     VARCHAR(255)     NOT NULL
+  id       INT          AUTO_INCREMENT,
+  text     VARCHAR      NOT NULL,
+  CONSTRAINT pk_id PRIMARY KEY (id)
 );
