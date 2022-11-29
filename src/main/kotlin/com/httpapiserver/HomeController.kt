@@ -15,9 +15,7 @@ class HomeController(val messageService: MessageService) {
     fun home(): List<Message> = messageService.loadMessages()
 
     @GetMapping("/{id}")
-    fun home(@PathVariable id: Long) {
-        messageService.loadOneBy(id)
-    }
+    fun home(@PathVariable id: Long): Message = messageService.loadOneBy(id)
 
     @PostMapping
     fun post(@RequestBody message: Message) = messageService.createMessage(message)
