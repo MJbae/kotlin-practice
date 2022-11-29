@@ -13,8 +13,6 @@ class MessageService(
         messageRepository.save(message)
     }
 
-    fun loadOneBy(id: Long): List<Message> = messageRepository.findById(id).toList()
+    fun loadOneBy(id: Long): Message = messageRepository.findByIdOrThrow(id)
 
-    fun <T : Any> Optional<out T>.toList(): List<T> =
-        if (isPresent) listOf(get()) else emptyList()
 }
