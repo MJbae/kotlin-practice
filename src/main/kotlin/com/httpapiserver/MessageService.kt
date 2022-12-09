@@ -1,7 +1,6 @@
 package com.httpapiserver
 
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service
 class MessageService(
@@ -14,5 +13,4 @@ class MessageService(
     }
 
     fun loadOneBy(id: Long): Message = messageRepository.findByIdOrThrow(id)
-
 }

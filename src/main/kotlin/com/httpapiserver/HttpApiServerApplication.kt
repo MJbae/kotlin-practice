@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class HttpApiServerApplication
 
 fun main(args: Array<String>) {
-	runApplication<HttpApiServerApplication>(*args)
+    runApplication<HttpApiServerApplication>(*args)
 }

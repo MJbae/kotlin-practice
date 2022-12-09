@@ -1,3 +1,3 @@
 package com.httpapiserver
 
-class NotFoundEntityException(message: String?): RuntimeException(message)
+class NotFoundEntityException(message: String?) : RuntimeException(message)
